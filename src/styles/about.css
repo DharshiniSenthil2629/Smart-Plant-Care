@@ -1,0 +1,263 @@
+/* General Section Styles */
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 30px;
+  background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+  position: relative;
+  color: white;
+  min-height: 100vh;
+  overflow: hidden;
+  animation: fadeInBg 1.8s ease-in-out;
+}
+
+/* Dark overlay */
+.about-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Background fade-in animation */
+@keyframes fadeInBg {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Sticky Vibrant Tag */
+.about-sticky-tag {
+  position: sticky;
+  top: 20px;
+  background: linear-gradient(135deg, #00ffae, #0099ff);
+  color: white;
+  font-weight: 600;
+  padding: 12px 28px;
+  font-size: 1.3rem;
+  border-radius: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  z-index: 100;
+  text-align: center;
+  margin-bottom: 30px;
+  animation: popIn 1s ease forwards;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-sticky-tag:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 174, 0.8), 0 0 15px rgba(0, 153, 255, 0.6);
+  cursor: pointer;
+  transform: scale(1.06);
+}
+
+/* Main Container */
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideUp 1.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Typography */
+h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.about-intro {
+  font-size: 1.4rem;
+  color: #f0f0f0;
+  margin-bottom: 35px;
+  max-width: 850px;
+  animation: fadeIn 2s ease;
+}
+
+.about-content {
+  text-align: left;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Headings and Lists */
+h2 {
+  font-size: 2.1rem;
+  color: #ffffff;
+  margin-bottom: 18px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #f3f3f3;
+  position: relative;
+  padding-left: 30px;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  color: #00ffae;
+  font-weight: bold;
+}
+
+/* FAQ Section */
+.faq {
+  margin-top: 50px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.faq-item {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1.2s ease;
+}
+
+.faq-item h4 {
+  font-size: 1.4rem;
+  color: #2f6a33;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Button Styles */
+.about-buttons {
+  margin-top: 45px;
+}
+
+.btn {
+  background-color: #2f6a33;
+  color: white;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  margin: 10px 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.btn:hover {
+  background-color: #256c28;
+  transform: scale(1.07);
+}
+
+/* Floating Leaves Animation */
+@keyframes leafFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(10deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.leaf {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: url('https://pngimg.com/uploads/leaf/leaf_PNG36616.png') no-repeat center center;
+  background-size: contain;
+  animation: leafFloat 5s ease-in-out infinite;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.leaf:nth-child(odd) {
+  animation-duration: 6s;
+  left: calc(20% + 10px);
+}
+
+.leaf:nth-child(even) {
+  animation-duration: 7s;
+  left: calc(70% - 10px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .about-intro {
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  ul li {
+    font-size: 1.05rem;
+  }
+
+  .faq-item h4 {
+    font-size: 1.2rem;
+  }
+
+  .faq-item p {
+    font-size: 1rem;
+  }
+
+  .about-sticky-tag {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+}

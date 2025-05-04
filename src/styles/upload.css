@@ -1,0 +1,88 @@
+.upload-page {
+  text-align: center;
+  padding: 80px 20px;
+  background: #fff;  /* Changed background to white */
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in;
+  background: url('https://static.vecteezy.com/system/resources/previews/037/236/444/large_2x/ai-generated-beautuful-home-plants-background-with-copy-space-free-photo.jpg') no-repeat center center/cover;
+}
+
+.upload-page h2 {
+  font-size: 2.8rem;
+  color: #050d05;  /* Dark green for the title */
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.upload-page input[type="file"] {
+  margin-bottom: 20px;
+  display: block;
+  border: 2px dashed #388e3c;  /* Dark green for dotted border */
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;  /* Reduced size of dotted box */
+  margin: 0 auto;
+}
+
+.upload-page input[type="file"]:hover {
+  border-color: #66bb6a;  /* Light green when hovered */
+  box-shadow: 0 0 10px rgba(102, 187, 106, 0.5);
+}
+
+.upload-btn {
+  background: linear-gradient(45deg, #66bb6a, #43a047);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.2s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  animation: pulse 2s infinite;
+  font-weight: bold;
+}
+
+.upload-btn:hover {
+  background: linear-gradient(45deg, #43a047, #388e3c);
+  transform: translateY(-4px);
+}
+
+.preview-image {
+  margin-top: 25px;
+  max-width: 320px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.preview-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(102, 187, 106, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(102, 187, 106, 0.5);
+  }
+}

@@ -1,0 +1,140 @@
+/* Enhanced Navbar Style */
+.navbar {
+  background: transparent !important;
+  color: #234d20;
+  box-shadow: none;
+  border-radius: 0 !important;
+  padding: 1.2rem 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-brand h2 {
+  color: #234d20;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.7rem;
+}
+
+.navbar-links li a {
+  color: #234d20;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 1.08rem;
+  transition: color 0.2s;
+}
+
+.navbar-links li a:hover {
+  background: none !important;
+  color: #4caf50;
+}
+
+.navbar-links li a .icon {
+  font-size: 1.3rem;
+}
+
+.navbar-links li a span {
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .navbar-links {
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .navbar-links li a span {
+    display: none;
+  }
+
+  .navbar-links li a .icon {
+    font-size: 1.5rem;
+  }
+}
+
+.tutorial-container {
+  /* ... */
+  background: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+  background-attachment: fixed;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.plant-id-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  max-width: 80vw;
+  margin: 40px auto;
+  background: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+  background-attachment: fixed;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+  padding: 2.5rem 2rem;
+  position: relative;
+  z-index: 1;
+  gap: 1.5rem;
+}
+
+.plant-id-container button {
+  border-radius: 6px;
+  padding: 0.8rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(60,60,60,0.07);
+  white-space: nowrap;
+  min-width: 160px;
+  width: auto;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .plant-id-container {
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem;
+    min-height: 180px;
+  }
+}
+
+/* For Chatbot */
+.chatbot-container {
+  background: url('https://th.bing.com/th/id/OIP.-YFAqjq6t4NXuAjl5l-TngAAAA?rs=1&pid=ImgDetMain') no-repeat center center/cover;
+  background-attachment: fixed;
+  /* ... existing styles ... */
+}
+
+/* For Watering */
+.watering-container {
+  background: url('https://th.bing.com/th/id/OIP.CH_OCjsC9oXRWn-3O59ArgHaEo?rs=1&pid=ImgDetMain') no-repeat center center/cover;
+  background-attachment: fixed;
+  /* ... existing styles ... */
+}

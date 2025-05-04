@@ -1,0 +1,123 @@
+.plant-identification {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.upload-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.file-input {
+  display: none;
+}
+
+.upload-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.upload-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-preview {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid #4CAF50;
+}
+
+.loading {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #4CAF50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #ffebee;
+  color: #c62828;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.result {
+  padding: 1.5rem;
+  margin: 1rem 0;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.result em {
+  font-style: italic;
+  color: #1b5e20;
+}
+
+.result strong {
+  font-weight: 600;
+  color: #1b5e20;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .plant-identification {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .upload-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .result {
+    font-size: 16px;
+    padding: 1rem;
+  }
+
+  .image-preview img {
+    max-height: 200px;
+  }
+} 

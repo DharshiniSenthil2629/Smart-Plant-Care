@@ -1,0 +1,93 @@
+.leaves {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .leaf {
+    position: absolute;
+    top: -50px;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    animation: fall linear infinite, sway ease-in-out infinite;
+  }
+  
+  /* Color Variations - Using filters */
+  .leaf:nth-child(odd) {
+    filter: hue-rotate(20deg);
+  }
+  
+  .leaf:nth-child(even) {
+    filter: hue-rotate(-20deg) brightness(1.2);
+  }
+  
+  /* Size & Position Variations */
+  .leaf:nth-child(1) {
+    left: 10%;
+    animation-duration: 9s, 4s;
+    width: 25px;
+    height: 25px;
+  }
+  
+  .leaf:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s, 1s;
+    animation-duration: 11s, 3.5s;
+    width: 35px;
+    height: 35px;
+  }
+  
+  .leaf:nth-child(3) {
+    left: 50%;
+    animation-delay: 4s, 2s;
+    animation-duration: 10s, 4.2s;
+  }
+  
+  .leaf:nth-child(4) {
+    left: 70%;
+    animation-delay: 1s, 0.5s;
+    animation-duration: 12s, 4.5s;
+    width: 28px;
+    height: 28px;
+  }
+  
+  .leaf:nth-child(5) {
+    left: 85%;
+    animation-delay: 3s, 1.2s;
+    animation-duration: 9s, 3.8s;
+  }
+  
+  /* Falling animation */
+  @keyframes fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.9;
+    }
+    50% {
+      transform: translateY(50vh) rotate(180deg);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Swing effect to make them sway side to side */
+  @keyframes sway {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(20px);
+    }
+  }
+  
