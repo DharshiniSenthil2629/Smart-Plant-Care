@@ -182,7 +182,7 @@ const Chatbot = () => {
   const handleSend = async (message) => {
     try {
       const response = await axios.post(
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAXcBboad6mZEA280k0rDQ8rt2NjIeHHjk",
+        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key",
         {
           contents: [{ 
             parts: [{ 
